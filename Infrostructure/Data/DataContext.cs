@@ -19,10 +19,10 @@ public class DataContext(DbContextOptions<DataContext> options) : DbContext(opti
     {
         modelBuilder.Entity<StudentGroup>().HasKey(sg => new { sg.StudentId, sg.GroupId });
 
-        modelBuilder.Entity<Student>()
-            .Property(s => s.Address)
-            .HasMaxLength(200)
-            .IsRequired();
+        // modelBuilder.Entity<Student>()
+        //     .Property(s => s.Address)
+        //     .HasMaxLength(200)
+        //     .IsRequired();
 
         modelBuilder.Entity<Course>()
             .HasMany(c => c.Groups)
