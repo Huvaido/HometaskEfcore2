@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Services;
 
-public class StudentService(DataContext context) : IStudentService
+public class StudentService(DataContext context)
 {
     public async Task<Response<Student>> CreateAsync(Student student)
     {

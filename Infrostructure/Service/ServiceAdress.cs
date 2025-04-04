@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Services;
 
+
 public class AdressService(DataContext context)
 {
     public async Task<Response<Adress>> CreateAsync(Adress adress)
